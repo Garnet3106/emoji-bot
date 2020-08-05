@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const token = 'NzQwMzk3NTIzNzAwNjc4Njk4.Xyoa7Q.wTIwOQc2QM5drlH4dFXkUxjs9Rc';
+const token = 'YOUR_BOT_TOKEN';
 const prefix = 'emoji.';
 
 var latestReceiveMessageID = ''
