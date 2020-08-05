@@ -76,7 +76,6 @@ function command(message) {
 
 client.on('messageReactionAdd', (reaction, user) => {
     let message = reaction.message;
-    let channel = message.channel;
     let emoji = reaction.emoji;
 
     if(message.id != latestReceiveMessageID)
@@ -86,13 +85,16 @@ client.on('messageReactionAdd', (reaction, user) => {
         return;
 
     let embed = {
+        author: {
+            name: user.tag,
+        },
         description: '[' + emoji.id + '](' + emoji.url + ') (' + reaction.count + ' reactions)',
         image: {
             url: emoji.url
         }
     }
 
-    channel.send({ embed: embed });
+    message.channel.send({ embed: embed });
 });
 
 
