@@ -86,7 +86,7 @@ client.on('messageReactionAdd', (reaction, user) => {
         return;
 
     let embed = {
-        description: '[' + emoji.id + '](' + emoji.url + ') (' + reaction.count + ' emojis)',
+        description: '[' + emoji.id + '](' + emoji.url + ') (' + reaction.count + ' reactions)',
         image: {
             url: emoji.url
         }
